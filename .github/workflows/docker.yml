@@ -38,4 +38,4 @@ jobs:
             STREAMLINK_VERSION=${{ github.event.inputs.streamlink_version }}
           tags: |
             jensforstmann/streamlink:${{ github.event.inputs.streamlink_version }}
-            ${{ github.event.inputs.latest && 'jensforstmann/streamlink:latest' || '' }}
+            ${{ github.event.inputs.latest == 'true' && 'jensforstmann/streamlink:latest' || '' }}
